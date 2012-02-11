@@ -1,0 +1,7 @@
+{
+	"id": "elliott",
+	"uid": 2001,
+	"groups": "sysadmin",
+	"shell": "/bin/bash",
+	"ssh_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC43VHzdQ3Hm4PciAkw/JbagYN5txiVKIGENEuzTpm79FyvYB/Ca6w9Yt6CwX1ztdzii8Kv+YH1NuG0/uHTexAtjb1zB7M0t2erE0RNWCwVZmVOVTKh/A3C9hTnSJohApeSYFMQMRRTxAQrblrucriGSbSyZq6q/Nglob8RH0K0yNEUZmT5U8kfPFt/4T5YV0E/+m3YhNkeVrvFwzrwqwoq443AUrXHHT0LRcbqX0dHqumTTr9Ee502i6v48KKGG0xxj3/wfxpraKIso47m8jzGGdqgih17bC9CWTNE+hn0vXNclc9bB7XyK/huLh6ErBnGECZADLOcsE0sQuLmxh+b"
+}
