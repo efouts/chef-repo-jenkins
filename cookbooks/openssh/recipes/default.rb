@@ -30,6 +30,12 @@ packages.each do |pkg|
   package pkg
 end
 
+cookbook_file "/etc/ssh/sshd_config" do
+  source "sshd_config"
+  mode "0644"
+  owner "root"
+end
+
 service "ssh" do
   case node[:platform]
   when "centos","redhat","fedora","arch"
@@ -49,6 +55,6 @@ service "ssh" do
     "arch" => { "default" => [ :restart ] },
     "default" => { "default" => [:restart, :reload ] }
   )
-  action [ :enable, :start ]
+  action [ :enable, :reload ]
 end
 
