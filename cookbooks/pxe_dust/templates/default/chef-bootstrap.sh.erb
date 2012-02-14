@@ -27,9 +27,8 @@ EOF
 
 wget -O /etc/chef/validation.pem http://<%= node[:ipaddress] %>/validation.pem
 
-#make chef-client a little more reliable on first run
-apt-get update
-#for use with ps
+apt-get update > /etc/chef/update-log
+
 mount /proc
 
-/usr/bin/chef-client -j /etc/chef/first-boot.json -L /etc/chef/log
+/usr/bin/chef-client > /etc/chef/log

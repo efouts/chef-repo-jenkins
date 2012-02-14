@@ -146,11 +146,8 @@ end
 
 log "jenkins: install and start" do
   notifies :install, "package[jenkins]", :immediately
-  notifies :start, "service[jenkins]", :immediately unless install_starts_service
-  notifies :create, "ruby_block[block_until_operational]", :immediately
-  not_if do
-    File.exists? "/usr/share/jenkins/jenkins.war"
-  end
+  notifies :start, "service[jenkins]", :immediately 
+  #notifies :create, "ruby_block[block_until_operational]", :immediately  
 end
 
 template "/etc/default/jenkins"
