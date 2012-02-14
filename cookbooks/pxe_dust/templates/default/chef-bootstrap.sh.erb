@@ -27,8 +27,14 @@ EOF
 
 wget -O /etc/chef/validation.pem http://<%= node[:ipaddress] %>/validation.pem
 
-apt-get update > /etc/chef/update-log
+apt-get update
 
 mount /proc
 
-/usr/bin/chef-client > /etc/chef/log
+cat > /etc/rc.local <<EOF
+#!/bin/sh -e
+
+/usr/bin/chef-client > /etc/chef/first-run
+chmod -x /etc/rc.local
+exit 0
+EOF
