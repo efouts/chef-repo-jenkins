@@ -1,2 +1,2 @@
 name 'chat-server'
-run_list 'role[base-server]', 'recipe[node]'
+run_list 'role[base-server]', 'recipe[network]',  'recipe[node]'
